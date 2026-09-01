@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JB Namibia - Social Links</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #ffd21c; }
+  body { min-height: 100vh; display: flex; justify-content: center; align-items: flex-start; }
+  .page { position: relative; width: min(100vw, 1152px); line-height: 0; }
+  .design { display: block; width: 100%; height: auto; position: relative; z-index: 1; }
+
+  /* Exact box hit areas; no translate/scale on the anchor itself. */
+  .click-box {
+    position: absolute;
+    z-index: 10;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 42px;
+    outline: none;
+    opacity: 0;
+    animation: fadeIn .55s ease forwards;
+  }
+
+  .click-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    transition: transform .20s ease, box-shadow .20s ease, background .20s ease;
+  }
+
+  .click-box:hover::before {
+    transform: scale(.992);
+    box-shadow: 0 8px 18px rgba(0,0,0,.12);
+    background: rgba(255,255,255,.06);
+  }
+
+  .click-box:active::before { transform: scale(.985); }
+
+  .box-1 { left: 4.1666667%; top: 31.2011719%; width: 91.6666667%; height: 9.8144531%; animation-delay: .10s; }
+  .box-2 { left: 4.1666667%; top: 43.7011719%; width: 91.6666667%; height: 9.8144531%; animation-delay: .22s; }
+  .box-3 { left: 4.1666667%; top: 56.2011719%; width: 91.6666667%; height: 9.8144531%; animation-delay: .34s; }
+  .box-4 { left: 4.1666667%; top: 68.7500000%; width: 91.6666667%; height: 9.8144531%; animation-delay: .46s; }
+  .box-5 { left: 4.1666667%; top: 81.2500000%; width: 91.6666667%; height: 9.8144531%; animation-delay: .58s; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .click-box { animation: none; opacity: 1; }
+  }
+</style>
+</head>
+<body>
+  <main class="page">
+    <img class="design" src="JB-Social-Media.png" alt="JB Namibia social media links">
+    <div class="links">
+      <a class="click-box box-1" href="https://www.facebook.com/JBNamibia" target="_blank" rel="noopener noreferrer" aria-label="Facebook"></a>
+      <a class="click-box box-2" href="https://www.instagram.com/jbnamibia?igsi=MW15a3R0anFsN3E2bw%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram"></a>
+      <a class="click-box box-3" href="https://vt.tiktok.com/ZS9BsJwqT5nXr-33AHX/" target="_blank" rel="noopener noreferrer" aria-label="TikTok"></a>
+      <a class="click-box box-4" href="https://wa.me/+26771877772" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Number"></a>
+      <a class="click-box box-5" href="https://whatsapp.com/channel/0029VbBvMER7DAX7oUwb5s2s" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Channel"></a>
+    </div>
+  </main>
+</body>
+</html>
